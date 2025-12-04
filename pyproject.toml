@@ -1,0 +1,18 @@
+[project]
+name = "tidal-mcp"
+version = "0.1.0"
+description = "Traditional MCP server for TIDAL - clean API wrapper following official MCP best practices"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastmcp>=2.12.0",
+    "tidalapi>=0.8.6",
+    "anyio>=4.0.0",
+]
+
+[project.scripts]
+tidal-mcp = "tidal_mcp.server:run_server"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
